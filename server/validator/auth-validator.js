@@ -22,4 +22,17 @@ const signSchema=zod.object({
     .min(3,{message:"Password must be at least 3 characters long"})
     .max(50,{message:"Password must be less than 50 charcters long"}),
 })
-module.exports=signSchema
+const loginSchema=zod.object({
+    email:zod
+    .string({required_error:"Email is required"})
+    .email({message:"Invalid email address"})
+    .trim()
+    .min(3,{message:"Email must be at least 3 characters long"})
+    .max(255,{message:"Email must be less than 255 charcters long"}),
+    password:zod
+    .string({required_error:"Password is required"})
+    .trim()
+    .min(3,{message:"Password must be at least 3 characters long"})
+    .max(50,{message:"Password must be less than 50 charcters long"}),
+})
+module.exports={signSchema,loginSchema}
