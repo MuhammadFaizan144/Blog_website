@@ -4,7 +4,7 @@ import { MdMenu ,MdClose} from 'react-icons/md'
 const Navbar = () => {
     const[menuOpen,setMenuOpen]=useState(false)
     return (
-        <nav className='flex justify-between items-center max-w-[1440px] mx-auto px-6 max-sm:px-2 h-[73px]'>
+        <nav className='flex justify-between items-center w-full max-w-[1440px] mx-auto px-6 max-sm:px-2 h-[73px] border-b border-b-[#DEE1E6FF]'>
 
             <div className="links flex justify-center items-center gap-6">
                 <div className="flex gap-2">
