@@ -33,7 +33,7 @@ const Navbar = () => {
                     <NavLink className='text-[14px] '>Sign Up</NavLink>
                 </div>
             </div>
-            <button className='sm:hidden' onClick={() => setMenuOpen(!menuOpen)}>
+            <button className='sm:hidden text-[25px] font-bold' onClick={() => setMenuOpen(!menuOpen)}>
                 {!menuOpen?<MdMenu />:<MdClose/>}
             </button>
             {menuOpen && (
