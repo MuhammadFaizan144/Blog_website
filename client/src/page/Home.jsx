@@ -119,6 +119,28 @@ const Home = () => {
           View All Categories
         </div>
       </section>
+      <section className='flex flex-col justify-center items-center'>
+        <div className="">
+          <h2>Featured Editorial</h2>
+          <p>Hand-picked stories from our senior editors</p>
+        </div>
+        <div className="">
+          <div className=""><img src="" alt="" /></div>
+          <div className="">
+            <div className="">Special Feature</div>
+            <h5>The Decentralized Future: How Blockchain is Reimagining the Internet for Creators.</h5>
+            <p>As we move beyond the gatekeepers of Web 2.0, a new paradigm is emerging. Discover how decentralized protocols are returning power to the individual writer and artist in 2024 and beyond.</p>
+            <div className="">
+              <img src="" alt="" />
+              <div className="">
+                <h6>Sarah Jenkins</h6>
+                <p>Editor-in-Chief • 12 min read</p>
+              </div>
+            </div>
+            <button>Read Full Story</button>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
