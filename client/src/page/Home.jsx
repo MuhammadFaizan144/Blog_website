@@ -119,25 +119,27 @@ const Home = () => {
           View All Categories
         </div>
       </section>
-      <section className='flex flex-col justify-center items-center'>
+      {/* Featured Editorial */}
+      <section className='flex flex-col justify-center p-10 lg:p-20 gap-8 lg:gap-14'>
         <div className="">
-          <h2>Featured Editorial</h2>
-          <p>Hand-picked stories from our senior editors</p>
+          <h2 className='text-[30px] font-merriweather font-bold'>Featured Editorial</h2>
+          <p className='text-[18px] text-gray-600'>Hand-picked stories from our senior editors</p>
         </div>
-        <div className="">
-          <div className=""><img src="" alt="" /></div>
-          <div className="">
-            <div className="">Special Feature</div>
-            <h5>The Decentralized Future: How Blockchain is Reimagining the Internet for Creators.</h5>
-            <p>As we move beyond the gatekeepers of Web 2.0, a new paradigm is emerging. Discover how decentralized protocols are returning power to the individual writer and artist in 2024 and beyond.</p>
-            <div className="">
-              <img src="" alt="" />
+
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 bg-blue-100 ">
+          <div className=""><img src="/images/building.jpg" alt="" className='w-[592px] h-[669px] rounded-md' /></div>
+          <div className="max-w-[1184px] p-6 lg:p-16">
+            <span className="rounded-3xl text-white font-semibold px-[30px] py-[4px] text-[12px] bg-blue-500 hover:bg-gray-600">Special Feature</span>
+            <h5 className='text-[36px] mt-3 font-merriweather font-bold max-w-[439px]'>The Decentralized Future: How Blockchain is Reimagining the Internet for Creators.</h5>
+            <p className='text-[18px] mt-4 text-gray-600 max-w-[471px]'>As we move beyond the gatekeepers of Web 2.0, a new paradigm is emerging. Discover how decentralized protocols are returning power to the individual writer and artist in 2024 and beyond.</p>
+            <div className="flex mt-4 gap-3">
+              <img src="/images/hero-circle-pic.webp" alt="" className='size-[48px] rounded-full ' />
               <div className="">
-                <h6>Sarah Jenkins</h6>
-                <p>Editor-in-Chief • 12 min read</p>
+                <h6 className='text-[16px] text-black'>Sarah Jenkins</h6>
+                <p className='text-[14px] text-gray-600'>Editor-in-Chief • 12 min read</p>
               </div>
             </div>
-            <button>Read Full Story</button>
+            <button className='text-[14px] mt-4 text-white px-[32px] py-[10px] bg-blue-500 rounded-3xl hover:bg-white hover:text-blue-500'>Read Full Story</button>
           </div>
         </div>
       </section>
