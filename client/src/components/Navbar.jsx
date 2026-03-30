@@ -4,57 +4,54 @@ import { MdMenu ,MdClose} from 'react-icons/md'
 const Navbar = () => {
     const[menuOpen,setMenuOpen]=useState(false)
     return (
-        <nav className='flex justify-between items-center w-full max-w-[1440px] mx-auto px-6 max-sm:px-2 h-[73px] border-b border-b-[#DEE1E6FF]'>
+        <nav className="w-full border-b border-b-[#DEE1E6FF]">
+  <div className='flex justify-between items-center max-w-[1440px] mx-auto px-6 max-sm:px-2 h-[73px]'>
 
-            <div className="links flex justify-center items-center gap-6">
-                <div className="flex gap-2">
-                    <div className="w-[32px] h-[32px] bg-blue-500 rounded-[4px]">
+    <div className="links flex justify-center items-center gap-6">
+      <div className="flex gap-2">
+        <div className="w-[32px] h-[32px] bg-blue-500 rounded-[4px]"></div>
+        <p className='text-[23px] text-blue-500 font-bold font-merriweather'>Blog Central</p>
+      </div>
 
-                    </div>
-                    <p className='text-[23px] text-blue-500 font-bold font-merriweather'>Blog Central</p>
-                </div>
-                <ul className="flex text-[14px] gap-6 max-sm:hidden">
-                    <li><NavLink>Home</NavLink></li>
-                    <li><NavLink>About</NavLink></li>
-                    <li><NavLink>Blogs</NavLink></li>
-                    <li><NavLink>Contact</NavLink></li>
+      <ul className="flex text-[14px] gap-6 max-sm:hidden">
+        <li><NavLink>Home</NavLink></li>
+        <li><NavLink>About</NavLink></li>
+        <li><NavLink>Blogs</NavLink></li>
+        <li><NavLink>Contact</NavLink></li>
+      </ul>
+    </div>
 
+    <div className="authentication-buttons flex gap-2 max-sm:hidden">
+      <div className="w-[61px] h-[36px] flex justify-center items-center">
+        <NavLink className='text-[14px]'>Login</NavLink>
+      </div>
 
+      <div className="w-[70px] h-[36px] text-white rounded-[8px] active:bg-blue-800 hover:bg-white hover:text-blue-500 flex justify-center items-center bg-blue-500">
+        <NavLink className='text-[14px]'>Sign Up</NavLink>
+      </div>
+    </div>
 
-                </ul>
-            </div>
-            <div className="authentication-buttons flex gap-2 max-sm:hidden">
-                <div className="w-[61px] h-[36px] flex justify-center items-center">
+    <button className='sm:hidden text-[25px] font-bold' onClick={() => setMenuOpen(!menuOpen)}>
+      {!menuOpen ? <MdMenu /> : <MdClose />}
+    </button>
+  </div>
 
-                    <NavLink className='text-[14px] '>Login</NavLink>
-                </div>
-                <div className="w-[70px] h-[36px] text-white rounded-[8px] active:bg-blue-800 active:text-white hover:bg-white hover:text-blue-500 flex justify-center items-center bg-blue-500">
+  {menuOpen && (
+    <div className="absolute top-[73px] left-0 w-full bg-white shadow-md sm:hidden">
+      <ul className="flex flex-col items-center gap-4 py-6">
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/">About</NavLink></li>
+        <li><NavLink to="/">Blogs</NavLink></li>
+        <li><NavLink to="/">Contact</NavLink></li>
 
-                    <NavLink className='text-[14px] '>Sign Up</NavLink>
-                </div>
-            </div>
-            <button className='sm:hidden text-[25px] font-bold' onClick={() => setMenuOpen(!menuOpen)}>
-                {!menuOpen?<MdMenu />:<MdClose/>}
-            </button>
-            {menuOpen && (
-                <div className="absolute top-[73px] left-0 w-full bg-white shadow-md sm:hidden">
-                    <ul className="flex flex-col items-center gap-4 py-6">
-
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/">About</NavLink></li>
-                        <li><NavLink to="/">Blogs</NavLink></li>
-                        <li><NavLink to="/">Contact</NavLink></li>
-
-                        <NavLink className="text-[14px]">Login</NavLink>
-
-                        <NavLink className="text-[14px] bg-blue-500 text-white px-4 py-2 rounded-lg">
-                            Sign Up
-                        </NavLink>
-
-                    </ul>
-                </div>
-            )}
-        </nav>
+        <NavLink className="text-[14px]">Login</NavLink>
+        <NavLink className="text-[14px] bg-blue-500 text-white px-4 py-2 rounded-lg">
+          Sign Up
+        </NavLink>
+      </ul>
+    </div>
+  )}
+</nav>
     )
 }
 

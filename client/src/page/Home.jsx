@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { MdSearch } from 'react-icons/md';
 import { FaArrowRight } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
 
 
 
@@ -16,10 +17,61 @@ const Home = () => {
     "Design",
     "Productivity"
   ]
+  const articles = [
+    {
+      category: "Technology",
+      title: "10 Essential Tools for Modern Developers in 2024",
+      desc: "From AI pair programmers to streamlined deployment pipelines, these tools are changing the game for coding efficiency.",
+      author: "Alex Rivera",
+      time: "6 min read",
+      img: "/images/dev.jpg",
+    },
+    {
+      category: "Lifestyle",
+      title: "The Art of Slow Living in a Fast-Paced World",
+      desc: "Discover the psychological benefits of mindfulness and intentionality in your daily routine.",
+      author: "Elena Rossi",
+      time: "4 min read",
+      img: "/images/book.jpg",
+    },
+    {
+      category: "Business",
+      title: "Scaling Your Startup: From Seed to Series A",
+      desc: "Key metrics and cultural shifts every founder needs to manage during the critical growth phase.",
+      author: "David Chen",
+      time: "9 min read",
+      img: "/images/meeting.jpg",
+    },
+    {
+      category: "Design",
+      title: "Why Minimalism is Still Dominating UI Design",
+      desc: "An analysis of modern user interfaces and why the 'less is more' philosophy remains unbeatable.",
+      author: "Sophie Martin",
+      time: "5 min read",
+      img: "/images/facebook.jpg",
+    },
+    {
+      category: "Productivity",
+      title: "The Deep Work Method: Reclaiming Your Focus",
+      desc: "How to block out digital distractions and produce your most valuable work in shorter periods.",
+      author: "Marcus Thorne",
+      time: "8 min read",
+      img: "/images/work.jpg",
+    },
+    {
+      category: "Health",
+      title: "Sustainable Nutrition: Eating for Your Health and the Planet",
+      desc: "Balancing dietary requirements with environmental impact through local and plant-forward choices.",
+      author: "Dr. Anna Lee",
+      time: "7 min read",
+      img: "/images/food.jpg",
+    },
+  ];
+
   return (
-    <main className="flex flex-col justify-center items-center">
+    <main className="flex flex-col justify-center items-center max-w-[1440px] mx-auto">
       {/* hero */}
-      <section className="grid grid-cols-2 max-lg:grid-cols-1 max-w-[1440px] w-full pb-28 pt-16  gap-10">
+      <section className="grid grid-cols-2 max-lg:grid-cols-1  w-full pb-28 pt-16  gap-10">
 
         {/* LEFT */}
         <div className="flex flex-col gap-6 justify-center max-lg:px-20 max-sm:px-5">
@@ -104,7 +156,7 @@ const Home = () => {
 
       </section>
       {/* TRENDING */}
-      <section className='flex justify-center items-center flex-col  gap-4 bg-gray-100 w-full py-10'>
+      <section className='flex justify-center items-center flex-col  gap-4 bg-gray-100 w-screen py-10'>
         <div className="flex">
           <h6 className='text-[14px] px-[21px] py-[10px] text-gray-600 font-semibold'>Trending:</h6>
           <ul className='flex flex-wrap gap-3 '>
@@ -141,6 +193,19 @@ const Home = () => {
             </div>
             <button className='text-[14px] mt-4 text-white px-[32px] py-[10px] bg-blue-500 rounded-3xl hover:bg-white hover:text-blue-500'>Read Full Story</button>
           </div>
+        </div>
+      </section>
+      {/* Latest Articles */}
+      <section className='flex flex-col p-20 w-full'>
+        <div className=' flex justify-between '>
+          <div className="">
+            <h2 className='text-[30px] font-merriweather font-bold'>Latest Articles</h2>
+            <p className='text-[18px] text-gray-600' >Stay updated with the freshest perspectives</p>
+          </div>
+          <button className='flex items-center border-none text-blue-500 hover:bg-blue-100 w-[169px] h-[40px] text-[14px] px-[16px] gap-4 relative top-5'>Browse All Blogs <span className='text-[10px]'><FaAngleRight /></span></button>
+        </div>
+        <div>
+          
         </div>
       </section>
     </main>
