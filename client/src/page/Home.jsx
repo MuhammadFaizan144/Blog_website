@@ -21,52 +21,65 @@ const Home = () => {
     {
       category: "Technology",
       title: "10 Essential Tools for Modern Developers in 2024",
-      desc: "From AI pair programmers to streamlined deployment pipelines, these tools are changing the game for coding efficiency.",
+      desc: "From AI pair programmers to streamlined deployment pipelines, these tools are changing the game.",
       author: "Alex Rivera",
-      time: "6 min read",
-      img: "/images/dev.jpg",
+      date: "Oct 12, 2024",
+      read: "6 min read",
+      img: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      pfpImg:"/images/01.avif"
     },
     {
       category: "Lifestyle",
       title: "The Art of Slow Living in a Fast-Paced World",
       desc: "Discover the psychological benefits of mindfulness and intentionality in your daily routine.",
       author: "Elena Rossi",
-      time: "4 min read",
-      img: "/images/book.jpg",
+      date: "Oct 10, 2024",
+      read: "4 min read",
+      img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+      pfpImg:"/images/02.avif"
     },
     {
       category: "Business",
       title: "Scaling Your Startup: From Seed to Series A",
-      desc: "Key metrics and cultural shifts every founder needs to manage during the critical growth phase.",
+      desc: "Key metrics and cultural shifts every founder needs to manage during growth.",
       author: "David Chen",
-      time: "9 min read",
-      img: "/images/meeting.jpg",
+      date: "Oct 08, 2024",
+      read: "9 min read",
+      img: "https://images.unsplash.com/photo-1556761175-4b46a572b786",
+      pfpImg:"/images/03.avif"
     },
     {
       category: "Design",
       title: "Why Minimalism is Still Dominating UI Design",
-      desc: "An analysis of modern user interfaces and why the 'less is more' philosophy remains unbeatable.",
+      desc: "An analysis of modern interfaces and why 'less is more' still works.",
       author: "Sophie Martin",
-      time: "5 min read",
-      img: "/images/facebook.jpg",
+      date: "Oct 05, 2024",
+      read: "5 min read",
+      img: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2",
+      pfpImg:"/images/04.jpg"
     },
     {
       category: "Productivity",
       title: "The Deep Work Method: Reclaiming Your Focus",
-      desc: "How to block out digital distractions and produce your most valuable work in shorter periods.",
+      desc: "How to block distractions and produce your best work in shorter periods.",
       author: "Marcus Thorne",
-      time: "8 min read",
-      img: "/images/work.jpg",
+      date: "Oct 03, 2024",
+      read: "8 min read",
+      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+      pfpImg:"/images/05.avif"
     },
     {
       category: "Health",
       title: "Sustainable Nutrition: Eating for Your Health and the Planet",
-      desc: "Balancing dietary requirements with environmental impact through local and plant-forward choices.",
+      desc: "Balancing diet with environmental impact through smart choices.",
       author: "Dr. Anna Lee",
-      time: "7 min read",
-      img: "/images/food.jpg",
-    },
+      date: "Sep 30, 2024",
+      read: "7 min read",
+      img: "https://images.unsplash.com/photo-1506806732259-39c2d0268443",
+      pfpImg:"/images/06.avif"
+    }
   ];
+
 
   return (
     <main className="flex flex-col justify-center items-center max-w-[1440px] mx-auto">
@@ -196,7 +209,7 @@ const Home = () => {
         </div>
       </section>
       {/* Latest Articles */}
-      <section className='flex flex-col p-20 w-full'>
+      <section className='flex flex-col p-20 w-full gap-14'>
         <div className=' flex justify-between '>
           <div className="">
             <h2 className='text-[30px] font-merriweather font-bold'>Latest Articles</h2>
@@ -205,7 +218,48 @@ const Home = () => {
           <button className='flex items-center border-none text-blue-500 hover:bg-blue-100 w-[169px] h-[40px] text-[14px] px-[16px] gap-4 relative top-5'>Browse All Blogs <span className='text-[10px]'><FaAngleRight /></span></button>
         </div>
         <div>
-          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white max-w-[368px] h-[471px] rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
+              >
+                {/* Image */}
+                <div className="relative">
+                  <img
+                    src={item.img}
+                    alt=""
+                    className="max-w-[368px] h-[230px] object-cover"
+                  />
+                  <span className="absolute top-3 left-3 bg-white text-sm px-3 py-1 rounded-full shadow">
+                    {item.category}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="p-5 flex flex-col gap-3">
+                  <h3 className="font-merriweather text-[20px] leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-500 text-[14px]">{item.desc}</p>
+
+                  {/* Footer */}
+                  <div className="flex justify-between items-center text-sm text-gray-400 mt-3">
+                    <div className='flex items-center gap-2'>
+                      <img src={item.pfpImg} alt="" className='size-[32px] rounded-full object-cover' />
+                      <div >
+                        <p className="font-medium text-gray-600 text-[12px]">{item.author}</p>
+                        <p className='text-[10px]'>{item.date}</p>
+                      </div>
+
+                    </div>
+                    <span className='text-[12px]'>{item.read}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
     </main>
