@@ -4,6 +4,7 @@ import { MdSearch } from 'react-icons/md';
 import { FaArrowRight } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 
+import { MdOutlineEmail } from "react-icons/md";
 
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
       date: "Oct 12, 2024",
       read: "6 min read",
       img: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      pfpImg:"/images/01.avif"
+      pfpImg: "/images/01.avif"
     },
     {
       category: "Lifestyle",
@@ -36,7 +37,7 @@ const Home = () => {
       date: "Oct 10, 2024",
       read: "4 min read",
       img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
-      pfpImg:"/images/02.avif"
+      pfpImg: "/images/02.avif"
     },
     {
       category: "Business",
@@ -46,7 +47,7 @@ const Home = () => {
       date: "Oct 08, 2024",
       read: "9 min read",
       img: "https://images.unsplash.com/photo-1556761175-4b46a572b786",
-      pfpImg:"/images/03.avif"
+      pfpImg: "/images/03.avif"
     },
     {
       category: "Design",
@@ -56,7 +57,7 @@ const Home = () => {
       date: "Oct 05, 2024",
       read: "5 min read",
       img: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2",
-      pfpImg:"/images/04.jpg"
+      pfpImg: "/images/04.jpg"
     },
     {
       category: "Productivity",
@@ -66,7 +67,7 @@ const Home = () => {
       date: "Oct 03, 2024",
       read: "8 min read",
       img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      pfpImg:"/images/05.avif"
+      pfpImg: "/images/05.avif"
     },
     {
       category: "Health",
@@ -76,7 +77,7 @@ const Home = () => {
       date: "Sep 30, 2024",
       read: "7 min read",
       img: "https://images.unsplash.com/photo-1506806732259-39c2d0268443",
-      pfpImg:"/images/06.avif"
+      pfpImg: "/images/06.avif"
     }
   ];
 
@@ -259,6 +260,41 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+        </div>
+      </section>
+      <section className='bg-blue-50  w-screen  py-32 px-4'>
+        <div className="flex flex-col justify-center items-center gap-6 p-20 bg-white max-w-[896px] mx-auto border border-[#DEE1E6FF] rounded-3xl">
+
+          <div className='flex justify-center items-center w-[64px] h-[64px] rounded-2xl bg-blue-100'>
+            <MdOutlineEmail className='text-blue-500 text-[32px]' />
+          </div>
+
+          <p className='font-merriweather text-[36px] text-center'>
+            Never Miss a Story.
+          </p>
+
+          <p className='text-gray-600 text-[18px] max-w-[534px] text-center'>
+            Join our weekly newsletter and receive the best of Blog Central directly in your inbox. No spam, just pure inspiration.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 w-full max-w-[500px]">
+
+            <input
+              type="text"
+              placeholder='Enter your email address'
+              class="w-full max-w-[329px] h-[48px] text-[14px] text-gray-600 px-4 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition duration-200"
+            />
+
+            <button className='h-[48px] px-6 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition'>
+              Subscribe Now
+            </button>
+
+          </div>
+
+          <p className='text-gray-600 text-[14px] italic text-center'>
+            By subscribing, you agree to our Terms of Service and Privacy Policy.
+          </p>
 
         </div>
       </section>
