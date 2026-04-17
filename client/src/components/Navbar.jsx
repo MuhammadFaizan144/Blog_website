@@ -15,7 +15,7 @@ const Navbar = () => {
 
       <ul className="flex text-[14px] gap-6 max-sm:hidden">
         <li><NavLink>Home</NavLink></li>
-        <li><NavLink>About</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink>Blogs</NavLink></li>
         <li><NavLink>Contact</NavLink></li>
       </ul>
@@ -40,7 +40,7 @@ const Navbar = () => {
     <div className="absolute top-[73px] left-0 w-full bg-white shadow-md sm:hidden">
       <ul className="flex flex-col items-center gap-4 py-6">
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/">About</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/">Blogs</NavLink></li>
         <li><NavLink to="/">Contact</NavLink></li>
 
