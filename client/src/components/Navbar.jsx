@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
 
       <ul className="flex text-[14px] gap-6 max-sm:hidden">
-        <li><NavLink>Home</NavLink></li>
+        <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink>Blogs</NavLink></li>
         <li><NavLink>Contact</NavLink></li>

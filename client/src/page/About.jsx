@@ -2,7 +2,27 @@ import React from 'react'
 import { MdSearch } from 'react-icons/md';
 import { FaArrowRight } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
+import { useState } from 'react';
+const OurValue = [
+    {
+        iconImage: "",
+        heading: "Radical Authenticity",
+        desciption: "We prioritize genuine human connection over algorithms, encouraging authors to speak their true minds.",
 
+    },
+    {
+        iconImage: "",
+        heading: "Continuous Growth",
+        desciption: "A space for everyone. We actively work to amplify underrepresented voices and foster safe dialogue.",
+
+    },
+    {
+        iconImage: "",
+        heading: "Radical Authenticity",
+        desciption: "Innovation never stops. We constantly evolve our platform to provide the best tools for modern creators.",
+
+    }
+]
 const About = () => {
     return (
         <main className='flex flex-col justify-center items-center max-w-[1440px] mx-auto'>
@@ -48,6 +68,23 @@ const About = () => {
 
                 </div>
 
+            </section>
+            <section className='w-screen bg-[#FAFAFBFF] py-24'>
+                <div className="flex flex-col justify-center items-center max-w-[1440px] mx-auto">
+                    <div className="flex flex-col items-center">
+                        <h2 className='font-merriweather text-[36px]'>Our Core Values</h2>
+                        <p className='text-[18px] text-gray-600'>The principles that guide every feature we build and every story we share.</p>
+                    </div>
+                    <div className=" grid xl:grid-cols-3 grid-cols-1 gap-36 mt-24">
+                        {OurValue.map((item, index) => {
+                            return (<li key={index} className='list-none flex flex-col gap-4 w-[350px]'>
+                                <div className="size-[48px] bg-[#067FF91A] rounded-[10px]">{item.iconImage}</div>
+                                <h2 className="text-black text-[20px] font-merriweather">{item.heading}</h2>
+                                <p className='text-gray-600 text-[16px] font-merriweather'>{item.desciption}</p>
+                            </li>)
+                        })}
+                    </div>
+                </div>
             </section>
         </main>
     )
