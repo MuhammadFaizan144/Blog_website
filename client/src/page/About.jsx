@@ -23,6 +23,44 @@ const OurValue = [
 
     }
 ]
+const Meet = [
+    {
+        Image: "/images/Meet01.avif",
+        name: "Sarah Mitchell",
+        position: "Founder & CEO",
+        desciption: "Passionate about the intersection of technology and storytelling. Former editor at TechDaily."
+    },
+    {
+        Image: "/images/Meet02.avif",
+        name: "David Chen",
+        position: "Head of Product",
+        desciption: "Building intuitive tools for the next generation of creators. Coffee enthusiast and world traveler."
+    },
+    {
+        Image: "/images/Meet03.avif",
+        name: "Elena Rodriguez",
+        position: "Community Lead",
+        desciption: "Ensuring every voice is heard. Dedicated to fostering a safe and engaging environment for our users."
+    },
+    {
+        Image: "/images/Meet04.jpg",
+        name: "Marcus Thorne",
+        position: "Chief Technology Officer",
+        desciption: "Scalability is my middle name. Obsessed with performance and elegant architecture."
+    },
+    {
+        Image: "/images/Meet05.avif",
+        name: "Aisha Khan",
+        position: "Lead Designer",
+        desciption: "Making the complex simple. Believes that good design is invisible and user-centric."
+    },
+    {
+        Image: "/images/Meet06.jpg",
+        name: "Jordan Blake",
+        position: "Senior Editor",
+        desciption: "A stickler for grammar and a lover of long-form journalism. Always looking for the next big story."
+    }
+]
 const About = () => {
     return (
         <main className='flex flex-col justify-center items-center max-w-[1440px] mx-auto'>
@@ -86,6 +124,31 @@ const About = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='bg-slate-100 w-screen py-24 p-4'>
+                <div className=" max-w-[1440px] mx-auto flex flex-col gap-16 items-center">
+                    <div className="flex flex-col items-center">
+                        <h2 className='text-[36px] font-merriweather text-black'>Meet the Visionaries</h2>
+                        <p className='text-[18px] font-sans text-gray-600'>The dedicated team of writers, developers, and designers working behind the scenes.</p>
+                    </div>
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+                        {Meet.map((item, index) => {
+                            return (<li key={index} className='flex flex-col gap-4 items-center p-10 list-none max-w-[363px] bg-white border border-[#171a1f14] rounded-[10px]'>
+                                <img src={item.Image} className='size-[80px] rounded-full object-cover' />
+                                <div className="flex flex-col  items-center">
+                                    <p className='text-[36px] font-merriweather text-black'>{item.name}</p>
+                                    <span className='bg-gray-200 rounded-3xl px-2 py-1 text-[12px] font-sans text-black'>{item.position}</span>
+                                </div>
+                                
+                                <p className='text-[14px] font-sans text-gray-600 italic text-center'>"{item.desciption}"</p>
+                            </li>)
+                        })}
+                    </div>
+                    <p className='text-[16px] font-sans text-black'>Join our growing team</p>
+                </div>
+
+            </section>
+         
         </main>
     )
 }
