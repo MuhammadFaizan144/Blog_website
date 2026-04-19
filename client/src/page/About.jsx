@@ -139,7 +139,7 @@ const About = () => {
                                     <p className='text-[36px] font-merriweather text-black'>{item.name}</p>
                                     <span className='bg-gray-200 rounded-3xl px-2 py-1 text-[12px] font-sans text-black'>{item.position}</span>
                                 </div>
-                                
+
                                 <p className='text-[14px] font-sans text-gray-600 italic text-center'>"{item.desciption}"</p>
                             </li>)
                         })}
@@ -148,7 +148,28 @@ const About = () => {
                 </div>
 
             </section>
-         
+            <section className='flex justify-center items-center py-28 px-4'>
+                <div className="w bg-blue-500 text-white flex flex-col items-center gap-10 py-16 px-32 rounded-[32px]">
+
+                    <p className='font-bold font-merriweather text-[36px] text-center'>
+                        Ready to start your own story?
+                    </p>
+
+                    <p className='text-[18px] font-sans max-w-[552px] text-center'>
+                        Join thousands of authors who have already found their home at Blog Central. It's free to start and takes less than a minute.
+                    </p>
+
+                    <div className="flex gap-4 flex-wrap justify-center">
+                        <button className='text-black h-12 px-8 flex items-center justify-center bg-white rounded-[6px] '>
+                            Get Started Today
+                        </button>
+                        <button className='h-12 px-8 flex items-center justify-center border border-white hover:border-gray-300 focus:border-grey-900 rounded-[6px]'>
+                            Browse Articles
+                        </button>
+                    </div>
+
+                </div>
+            </section>
         </main>
     )
 }
