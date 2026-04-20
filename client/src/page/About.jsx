@@ -3,22 +3,27 @@ import { MdSearch } from 'react-icons/md';
 import { FaArrowRight } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import { useState } from 'react';
+// import { Radical } from 'lucide-react';
+import { LuRadical } from "react-icons/lu";
+import { MdPeople } from "react-icons/md";
+import { MdElectricBolt } from "react-icons/md";
+
 const OurValue = [
     {
-        iconImage: "",
+        iconImage: LuRadical,
         heading: "Radical Authenticity",
         desciption: "We prioritize genuine human connection over algorithms, encouraging authors to speak their true minds.",
 
     },
     {
-        iconImage: "",
-        heading: "Continuous Growth",
+        iconImage: MdPeople,
+        heading: "Inclusive Community",
         desciption: "A space for everyone. We actively work to amplify underrepresented voices and foster safe dialogue.",
 
     },
     {
-        iconImage: "",
-        heading: "Radical Authenticity",
+        iconImage: MdElectricBolt,
+        heading: "Continuous Growth",
         desciption: "Innovation never stops. We constantly evolve our platform to provide the best tools for modern creators.",
 
     }
@@ -115,8 +120,9 @@ const About = () => {
                     </div>
                     <div className=" grid xl:grid-cols-3 grid-cols-1 gap-36 mt-24">
                         {OurValue.map((item, index) => {
+                            const Icon=item.iconImage;
                             return (<li key={index} className='list-none flex flex-col gap-4 w-[350px]'>
-                                <div className="size-[48px] bg-[#067FF91A] rounded-[10px]">{item.iconImage}</div>
+                                <div className="size-[48px] bg-[#067FF91A] text-blue-600 rounded-[10px] flex justify-center items-center"><Icon size={24}/></div>
                                 <h2 className="text-black text-[20px] font-merriweather">{item.heading}</h2>
                                 <p className='text-gray-600 text-[16px] font-merriweather'>{item.desciption}</p>
                             </li>)
@@ -149,7 +155,7 @@ const About = () => {
 
             </section>
             <section className='flex justify-center items-center py-28 px-4'>
-                <div className="w bg-blue-500 text-white flex flex-col items-center gap-10 py-16 px-32 rounded-[32px]">
+                <div className="w bg-blue-500 text-white flex flex-col items-center gap-10 py-16 lg:px-32 px-10 rounded-[32px]">
 
                     <p className='font-bold font-merriweather text-[36px] text-center'>
                         Ready to start your own story?
@@ -167,7 +173,6 @@ const About = () => {
                             Browse Articles
                         </button>
                     </div>
-
                 </div>
             </section>
         </main>

@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -23,7 +24,9 @@ const Footer = () => {
           {/* Logo + Description */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6 border-2 border-blue-600 rounded-sm"></div>
+              <div className="w-[38px] h-[38px] bg-blue-500 rounded-[4px] flex items-center justify-center">
+          <img src="/images/logo.png" alt="" className='size-[32px]'/>
+        </div>
               <h2 className="text-[23px] text-blue-500 font-bold font-merriweather">
                 Blog Central
               </h2>

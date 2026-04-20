@@ -9,7 +9,9 @@ const Navbar = () => {
 
     <div className="links flex justify-center items-center gap-6">
       <div className="flex gap-2">
-        <div className="w-[32px] h-[32px] bg-blue-500 rounded-[4px]"></div>
+        <div className="w-[38px] h-[38px] bg-blue-500 rounded-[4px] flex items-center justify-center">
+          <img src="/images/logo.png" alt="" className='size-[32px]'/>
+        </div>
         <p className='text-[23px] text-blue-500 font-bold font-merriweather'>Blog Central</p>
       </div>
 
