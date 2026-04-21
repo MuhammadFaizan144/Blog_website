@@ -18,18 +18,18 @@ const Navbar = () => {
       <ul className="flex text-[14px] gap-6 max-sm:hidden">
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink>Blogs</NavLink></li>
-        <li><NavLink>Contact</NavLink></li>
+        <li><NavLink to='/blog'>Blogs</NavLink></li>
+        <li><NavLink to='contact'>Contact</NavLink></li>
       </ul>
     </div>
 
     <div className="authentication-buttons flex gap-2 max-sm:hidden">
       <div className="w-[61px] h-[36px] flex justify-center items-center">
-        <NavLink className='text-[14px]'>Login</NavLink>
+        <NavLink to="/login" className='text-[14px]'>Login</NavLink>
       </div>
 
       <div className="w-[70px] h-[36px] text-white rounded-[8px] active:bg-blue-800 hover:bg-white hover:text-blue-500 flex justify-center items-center bg-blue-500">
-        <NavLink className='text-[14px]'>Sign Up</NavLink>
+        <NavLink className='text-[14px]' to="/signup">Sign Up</NavLink>
       </div>
     </div>
 
@@ -43,11 +43,11 @@ const Navbar = () => {
       <ul className="flex flex-col items-center gap-4 py-6">
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/">Blogs</NavLink></li>
-        <li><NavLink to="/">Contact</NavLink></li>
+        <li><NavLink to="/blog">Blogs</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
 
-        <NavLink className="text-[14px]">Login</NavLink>
-        <NavLink className="text-[14px] bg-blue-500 text-white px-4 py-2 rounded-lg">
+        <NavLink className="text-[14px]" to="/login">Login</NavLink>
+        <NavLink to="/signup" className="text-[14px] bg-blue-500 text-white px-4 py-2 rounded-lg">
           Sign Up
         </NavLink>
       </ul>
