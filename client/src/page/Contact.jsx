@@ -62,14 +62,14 @@ const Contact = () => {
     <div className="min-h-screen font-sans bg-white">
  
       {/* ── Hero ── */}
-      <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 py-16 text-center">
-        <span className="inline-block border border-blue-300 text-blue-600 text-sm px-4 py-1 rounded-full mb-5 font-medium bg-white/70">
+      <div className="bg-gray-100 py-20 text-center">
+        <span className="inline-block border border-blue-400 text-blue-500 text-[12px] px-4 py-1 rounded-full mb-2 font-medium bg-[#FAFAFBFF]">
           Contact Us
         </span>
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h1 className="font-merriweather text-[48px] font-bold text-gray-900 mb-4">
           Let's Start a Conversation
         </h1>
-        <p className="text-gray-500 max-w-md mx-auto text-base leading-relaxed">
+        <p className="text-gray-500 max-w-[700px] mx-auto text-[18px] leading-relaxed">
           Have a question about our articles? Want to contribute a guest post? Our team is here to
           help you engage with the community.
         </p>
