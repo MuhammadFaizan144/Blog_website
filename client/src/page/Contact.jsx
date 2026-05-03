@@ -59,10 +59,10 @@ const Contact = () => {
   const handleInput = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   return (
-    <div className="min-h-screen font-sans bg-white">
+    <main className="min-h-screen font-sans bg-white">
  
       {/* ── Hero ── */}
-      <div className="bg-gray-100 py-20 text-center">
+      <section className="bg-gray-100 py-20 text-center">
         <span className="inline-block border border-blue-400 text-blue-500 text-[12px] px-4 py-1 rounded-full mb-2 font-medium bg-[#FAFAFBFF]">
           Contact Us
         </span>
@@ -73,7 +73,7 @@ const Contact = () => {
           Have a question about our articles? Want to contribute a guest post? Our team is here to
           help you engage with the community.
         </p>
-      </div>
+      </section>
  
       <div className="w-full h-px bg-gray-100" />
  
@@ -272,11 +272,11 @@ const Contact = () => {
       </div>
  
       {/* ── Footer Newsletter ── */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 px-6 py-12">
+      <div className="bg-[#F0F7FFFF] px-6 py-16">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900">Join the conversation.</h3>
-            <p className="text-gray-500 text-sm mt-1">
+            <h3 className="text-2xl font-merriweather font-bold text-gray-900">Join the conversation.</h3>
+            <p className="text-gray-600 text-[16px] mt-2">
               Subscribe to our weekly digest of top stories and exclusive insights.
             </p>
           </div>
@@ -295,7 +295,7 @@ const Contact = () => {
         </div>
       </div>
  
-    </div>
+    </main>
 
   )
 }
